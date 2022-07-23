@@ -1,0 +1,31 @@
+body{
+    background-color: aqua
+    ;
+    font-weight: normal;
+    font-size: 1em;
+    text-align: justify;
+
+}
+h1#principal{
+    text-align: center;
+    color: red;
+    background-color: black;
+}
+h1{
+    font-style: italic;
+    background-color: brown;
+}
+p,li{
+    text-indent: 30px;
+}
+div > P {
+    display: none;
+}
+
+
+div:hover > p {
+    display: block;
+    background-color:white;
+    color: red;
+}
+
