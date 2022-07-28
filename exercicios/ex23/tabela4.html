@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Completas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+            
+            
+        }
+        td,th{
+            border: 1px solid blue;
+            padding: 10px;
+            height: 10px;
+        }
+        tbody >tr:nth-child(2n)
+        {
+            background-color: aqua;
+        }
+        th{
+            background-color:white;
+        }
+        caption{
+            border: 1px solid black;
+            padding: 10px;
+            background-color: black;
+            font-size: 1.5em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercio de Tabelas</h1>
+    <table>
+        <caption>Filmes Favoritos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupo</th>
+                <th scope="col">NOMES</th>
+                <th scope="colgroup" colspan="3">FILMES</th>
+                
+                
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup"       rowspan="3">MULHERES</th>
+                    <td>Ana maria Santos</td>
+                    <td>vingadores</td>
+                    <td>Super mem</td>
+                    <td>Zorro</td>
+                </tr>
+            
+                <tr>
+                    <td>Patricia flores </td>
+                    <td>a bela e a fera</td>
+                    <td>jurrasic park</td>
+                    <td>titanic</td>
+                </tr>
+                <tr>
+                    <td>Rosangela Pimentel</td>
+                    <td>jogos mortais</td>
+                    <td>a viagem</td>
+                    <td>a mumia</td>
+                </tr>
+                <tr >
+                    <th scope="rowgroup" rowspan="3">Homens</th>
+                    <td >francinaldo</td>
+                    <td>jumbo</td>
+                    <td>bambi</td>
+                    <td>procurando nemo</td>
+                </tr>
+                <tr>
+                    <td>franciney</td>
+                    <td>a pequena sereia</td>
+                    <td>veloz e furiosos</td>
+                    <td>Rambo</td>
+                </tr>
+                <tr>
+                    <td>francimar</td>
+                    <td>O rei leao</td>
+                    <td>cidade de Deus</td>
+                    <td>tropa de elite</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <th scope="col" colspan="4">total</th>
+                        <td>0000</td>
+                    </tr>
+                </tfoot>
+                
+            </tbody>
+        
+    </table>
+</body>
+</html>
