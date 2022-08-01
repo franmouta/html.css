@@ -9,18 +9,109 @@
 <body>
     <h1>Meu segundo Formulario</h1>
     <form method="post" autocomplete="on" action="cadastro.py">
-        <p>
-            <label for="iusu">Usuario</label>
-            <input type="text" name="usu" id="iusu" required>
-        </p>
-        <p>
-            <label for="isen">senha</label>
-            <input type="password" name="sen" id="isen" required minlength="8" maxlength="10" size="10" placeholder="8 caracter" autocomplete="current-password">
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
+        
+    <fieldset>
+        <legend>Formulario</legend>
+            <p>
+                <label for="iusu">Usuario</label>
+                    <input type="text" name="usu" id="iusu" required>
+            </p>
+            <p>
+                <label for="isen">senha</label>
+                    <input type="password" name="sen" id="isen" required minlength="8" maxlength="10" size="10" placeholder="8 caracter" autocomplete="current-password">
+            </p>
+            <p>
+                <label for="icor">cor</label>
+                <input type="color" name="cor" id="icor">
+            </p>
+            <p>
+                <label for="inivel">nivel de sastifação</label>
+                <input type="range" name="nivel" id="inivel">
+            
+            </p>
+            <p>
+                <label for="ifoto">foto de perfil</label>
+                <input type="file" name="foto" id="ifoto">
+            </p>
+            <p>
+            
+                <input type="checkbox" name="esp" id="iesp"><label for="iesp"> futebol <br></label>
+                <input type="checkbox" name="nat" id="inat">
+                <label for="inat">natação</label>
+                
+            </p>
+            <p>
+                
+                <input type="radio" name="sexo" id="if">
+                <label for="if">femenino <br></label>
+                <input type="radio" name="sexo" id="im">
+                <label for="im">masculino</label>
+            </p>
+            <p>
+                <label for="iest">Estado</label>
+                <select name="estado" id="iest">
+                    <optgroup label="teste">
+                        <option value="--"> ---escolha----</option>
+                        <option value="SP">São paulo</option>
+                        <option value="AM">Amazonas</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="ipro">profissão</label>
+                <input type="text" name="pro" id="ipro" list="lipro">
+                <datalist id="lipro">
+
+                    <option>programador</option>
+                    <option>cozineiro</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imsg">Mensagem</label><br>
+                <textarea name="mesg" id="imsg" cols="30" rows="10"> Eu sou foda em programação</textarea>
+            </p>
+            <p>
+                <label for="in1">numero1</label>
+                <input type="number" name="n1" id="in1" required oninput="isoma.innerHTML = Number(in1.value) + Number(ine2.value)">
+            </p>
+    
+            <p>
+                <label for="in2">numero2</label>
+                <input type="number" name="n2" id="in2" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            </p>
+            <p>
+                <label for="isoma">soma</label>
+                <output name="soma" id="isoma" >
+                   0
+                </output>
+            </p>
+            <p>
+                <label for="inum">nivel de sastifação</label>
+                <input type="range" name="num" id="inum" min="0" max="10" value="5"  oninput="ival.innerHTML=Number(inum.value)">
+                <output id="ival">5 </output>
+            </p>
+            <p>
+                <label for="iano">Em que ano nasceu</label>
+                <input type="number" name="ano" id="iano" min="1900" max="2050" value="0000" oninput="calcidade()">
+            
+            </p>
+            <p>
+                <label for="idade"></label>
+                <output id="idade">0</output>
+            </p>
+            <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+            </p>
+            
+        </fieldset>
+        
     </form>
+    <script>
+        function calcidade(){
+        let atual = new Date().getFullYear()
+        idade.innerHTML= Number(atual)- Number(iano.value)}
+    </script>
+
 </body>
 </html>
